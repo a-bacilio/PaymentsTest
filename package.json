@@ -20,7 +20,10 @@
     "@babel/preset-env": "^7.16.4",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
+    "@types/bcrypt": "5.0.0",
     "@types/jest": "^27.4.0",
+    "@types/jsonwebtoken": "8.5.8",
+    "@types/morgan": "1.9.3",
     "babel-jest": "^27.4.2",
     "commitlint": "^15.0.0",
     "eslint": "^7.9.0",
@@ -37,11 +40,16 @@
   },
   "dependencies": {
     "@types/express": "4.17.13",
+    "bcrypt": "5.0.1",
     "dotenv": "16.0.0",
     "eslint-plugin-jest": "25.3.0",
     "express": "4.17.2",
+    "jsonwebtoken": "8.5.1",
     "mongoose": "6.2.2",
-    "ts-node-dev": "1.1.8"
+    "morgan": "1.10.0",
+    "ts-node-dev": "1.1.8",
+    "winston": "3.6.0",
+    "yup": "0.32.11"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
