@@ -1,11 +1,12 @@
 {
-  "name": "nodelrn",
+  "name": "api-ez-pharm",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "type": "commonjs",
   "scripts": {
-    "start": "node src/index.js",
+    "build": "tsc",
+    "start": "node ./dist/src/index.js",
     "start:dev": "ts-node-dev src/index.ts",
     "test": "jest --config ./jest.config.js",
     "lint": "eslint --fix --ext .js",
