@@ -48,9 +48,9 @@
     "jsonwebtoken": "8.5.1",
     "mongoose": "6.2.2",
     "morgan": "1.10.0",
-    "ts-node-dev": "1.1.8",
     "winston": "3.6.0",
-    "yup": "0.32.11"
+    "ts-node-dev": "1.1.8",
+    "yup": "^0.32.11"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
