@@ -6,9 +6,9 @@ const updateCartService = async (
   cantent: ICart
 ): Promise<ICart | null> => {
   try {
-    const cartFound: ICart | null = await cartModel.findById(id);
+    const cartFound: ICart | null = await cartModel.findOne({ _id: id });
 
-    if (cartFound) {
+    if (!cartFound) {
       throw new Error("Cart not found");
     }
 

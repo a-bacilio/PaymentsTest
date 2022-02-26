@@ -3,7 +3,10 @@ import ICart from "../types/cartInterface";
 
 const getCartByIdService = async (idCart: string): Promise<ICart> => {
   try {
-    const cart: ICart | null = await cartModel.findOne({ _id: idCart });
+    const cart: ICart | null = await cartModel
+      .findOne({ _id: idCart })
+      .populate("user")
+      .populate("products");
     if (!cart) throw new Error("cart not found");
     return cart;
   } catch (error: any) {

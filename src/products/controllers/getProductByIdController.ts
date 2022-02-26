@@ -1,15 +1,16 @@
-import { Request, Response } from "express";
-import getProductByIdService from '../services/getProductByIdService'
+import { NextFunction, Request, Response } from "express";
+import { ApplicationError } from "../../shared/customErrors/ApplicationError";
+import getProductByIdService from "../services/getProductByIdService";
 
-
-export const getProductByIdController = async (req: Request, res: Response) =>{
-
-    try{
-      const product = await getProductByIdService(req.params.id);
+export const getProductByIdController = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  try {
+    const product = await getProductByIdService(req.params.id);
     res.status(200).json(product);
-  } catch (error) {
-    res.status(500).json(error);
+  } catch (error: any) {
+    next(new ApplicationError(400, error.message));
   }
-}
-
-
+};

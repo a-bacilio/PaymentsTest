@@ -1,15 +1,17 @@
-import { Response, Request } from "express";
+import { Response, Request, NextFunction } from "express";
+import { ApplicationError } from "../../shared/customErrors/ApplicationError";
 import getPaymentbyUserIdService from "../services/getPaymentByUserId";
 
 const getPaymentByUserIdController = async (
   req: Request<{ user: string }, {}, {}>,
-  res: Response
+  res: Response,
+  next: NextFunction
 ) => {
   try {
     const cart = await getPaymentbyUserIdService(req.params.user);
     res.status(200).json(cart);
-  } catch (error) {
-    res.status(500).json(error);
+  } catch (error: any) {
+    next(new ApplicationError(400, error.message));
   }
 };
 
