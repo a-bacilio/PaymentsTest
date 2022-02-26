@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { authLogin } from '../../controllers/auth/loginController';
-import { authSignup } from '../../controllers/auth/signUpController';
+import { authLogin } from '../controllers/loginController';
+import { authSignup } from '../controllers/signUpController';
 import { bodyRequestValidator } from '../../shared/validators/bodyRequestValidators';
 import {
   createUserValidator,

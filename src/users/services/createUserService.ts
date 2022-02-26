@@ -1,8 +1,8 @@
-import { userModel } from '../../models/users/userModel';
+import { userModel } from '../entity/models/userModel';
 import { createResource } from '../../shared/factory/createResource';
 import Logger from '../../shared/logger/appLogger';
-import { ICreateUser } from '../../types/auth/manageUser';
-import { ISchemaUser } from '../../types/users/user';
+import { ICreateUser } from '../../auth/types/manageUser';
+import { ISchemaUser } from '../entity/types/user';
 import { encryptPassword } from '../../utils/passwordManager';
 
 export const createUserService = async (

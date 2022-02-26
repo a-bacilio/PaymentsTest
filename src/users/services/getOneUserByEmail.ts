@@ -1,6 +1,6 @@
 import logger from '../../shared/logger/appLogger';
-import { userModel } from '../../models/users/userModel';
-import { ISchemaUser } from '../../types/users/user';
+import { userModel } from '../entity/models/userModel';
+import { ISchemaUser } from '../entity/types/user';
 import { findOneResourceByField } from '../../shared/factory/findOneResourceByField';
 
 export const getOneUserByEmail = async (

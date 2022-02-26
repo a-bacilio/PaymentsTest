@@ -1,8 +1,8 @@
 import logger from '../../shared/logger/appLogger';
-import { ILoginUser } from '../../types/auth/manageUser';
+import { ILoginUser } from '../types/manageUser';
 import { isValidPassword } from '../../utils/passwordManager';
 import { createAuthToken } from '../../utils/tokenManager';
-import { getOneUserByEmail } from '../users/getOneUserByEmail';
+import { getOneUserByEmail } from '../../users/services/getOneUserByEmail';
 
 export type TokenResponse = {
   authToken: string;
