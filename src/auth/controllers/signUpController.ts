@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from 'express';
-import { authCreateTokenService } from '../../services/auth/createTokenService';
-import { createUserService } from '../../services/auth/createUserService';
+import { authCreateTokenService } from '../services/createTokenService';
+import { createUserService } from '../../users/services/createUserService';
 import { ApplicationError } from '../../shared/customErrors/ApplicationError';
-import { ICreateUser } from '../../types/auth/manageUser';
+import { ICreateUser } from '../types/manageUser';
 
 export const authSignup = async (
   req: Request<{}, {}, ICreateUser>,

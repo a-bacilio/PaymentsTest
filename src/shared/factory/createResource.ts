@@ -1,5 +1,5 @@
 import { Model as ModelType } from 'mongoose';
-import { ISchemaUser } from '../../types/users/user';
+import { ISchemaUser } from '../../users/entity/types/user';
 
 export const createResource =
   <K extends ModelType<ISchemaUser>>(Model: K) =>

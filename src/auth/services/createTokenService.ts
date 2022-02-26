@@ -1,5 +1,5 @@
 import logger from '../../shared/logger/appLogger';
-import { UserIdType } from '../../types/users/user';
+import { UserIdType } from '../../users/entity/types/user';
 import { createAuthToken } from '../../utils/tokenManager';
 
 export const authCreateTokenService = (

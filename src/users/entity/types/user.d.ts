@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-import { ICreateUser } from '../auth/manageUser';
+import { ICreateUser } from '../../../auth/types/manageUser';
 
 export interface ISchemaUser extends ICreateUser {
   id: UserIdType;
