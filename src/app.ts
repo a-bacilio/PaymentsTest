@@ -2,8 +2,8 @@ import dotenv from 'dotenv';
 import express, { Application, Request, Response, NextFunction } from 'express';
 import morgan from './shared/logger/morganLogger';
 
-import authRoutes from './routes/auth/authRoutes';
-import paymentroutes from './payments/routes/paymentRoutes'
+import paymentroutes from './payments/routes/paymentRoutes';
+import authRoutes from './auth/routes/authRoutes';
 
 dotenv.config();
 const app: Application = express();
