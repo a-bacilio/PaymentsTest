@@ -8,8 +8,7 @@ export const bodyRequestValidator =
   async (req: Request, _res: Response, next: NextFunction) => {
     try {
       await schema.validate({
-        body: req.body,
-        params: req.params,
+        body: req.body
       });
       next();
     } catch (error: any) {
