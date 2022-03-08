@@ -7,7 +7,7 @@ const createNewPaymentController = async (
   req: Request<{}, {}, Payment>,
   res: Response,
   next: NextFunction
-) => {
+): Promise<void> => {
   try {
     const newPayment = await createNewPaymentService(req.body);
     res.status(200).json({ newPayment });

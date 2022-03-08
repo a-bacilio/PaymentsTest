@@ -1,9 +1,10 @@
 import { Types } from "mongoose";
+import { UserIdType } from "../../../users/entity/types/user";
 
 export interface Payment {
   id: PaymentId;
-  user: Types.ObjectId;
-  cart: Types.ObjectId;
+  user: string | Types.ObjectId;
+  cart: string | Types.ObjectId;
   createdAt: Date;
   editedAt: Date | null;
 }
